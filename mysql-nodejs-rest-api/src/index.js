@@ -7,8 +7,8 @@ app.set('port', process.env.PORT || 3000 );
 app.use(express.json());
 
 //Arregla un error a futuro:
-//const cors = require('cors')
-//app.use(cors())
+const cors = require('cors')
+app.use(cors())
 
 // Rutas
 app.use(require('./rutas/chips'));
