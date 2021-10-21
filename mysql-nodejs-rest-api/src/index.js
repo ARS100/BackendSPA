@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 // Configuración
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT );
 // Middlewares (Funciones ejecutadas antes de las rutas)
 app.use(express.json());
 
