@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 // Configuración
-app.set('port', process.env.PORT );
+app.set('port', process.env.PORT || 3000 );
 // Middlewares (Funciones ejecutadas antes de las rutas)
 app.use(express.json());
 
@@ -16,5 +16,5 @@ app.use(require('./rutas/clientes'));
 app.use(require('./rutas/envio'));
 // Iniciar el servidor
 app.listen(app.get('port'), () =>{
-    console.log('Server on port', app.get('port'));
+    console.log('Server en el puerto', app.get('port'));
 });
